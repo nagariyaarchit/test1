@@ -28,8 +28,6 @@ class Bank:
         print(f"Opening account for {account_holder_name} with initial balance of {initial_balance}")
         self.account_ledger[account_holder_name] = initial_balance
 
-
-# Interactive interface to use the Bank class
 bank = Bank()
 
 while True:
@@ -47,13 +45,11 @@ while True:
         account_holder_name = input("Enter account holder name: ")
         initial_balance = float(input("Enter initial balance: "))
         bank.open_account(account_holder_name, initial_balance)
-        print("Account opened successfully!")
-
+       
     elif choice == 2:
         account_holder_name = input("Enter account holder name: ")
         money_to_deposit = float(input("Enter amount to deposit: "))
         bank.deposit(account_holder_name, money_to_deposit)
-        print("Deposit successful!")
 
     elif choice == 3:
         account_holder_name = input("Enter account holder name: ")
@@ -63,12 +59,6 @@ while True:
     elif choice == 4:
         account_holder_name = input("Enter account holder name: ")
         balance = bank.check_balance(account_holder_name)
-        if balance is not None:
-            print(f"Balance for {account_holder_name}: {balance}")
 
     elif choice == 5:
-        print("Exiting...")
         break
-
-    else:
-        print("Invalid choice. Please enter a number from 1 to 5.")
